@@ -19,7 +19,7 @@ function login(form_obj) {
 
     $.ajax({
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/x-www-form-urlencoded" 
         },
         method: "POST",
         data: form_parameter($(form_obj).attr("name")),
