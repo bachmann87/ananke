@@ -3,6 +3,8 @@ namespace VendorName\Components\UserInterfaces;
 
 use VendorName\Components\Interfaces\CalendarInterface;
 use VendorName\Components\ORM\SocialMediaPostORM;
+use VendorName\Components\ORM\PlattformORM;
+use VendorName\Components\ORM\ThreadORM;
 
 use DateTimeImmutable;
 
@@ -14,7 +16,7 @@ use DateTimeImmutable;
  */
 class Calendar implements CalendarInterface
 {
-    public $timeslotInterval = "1h";
+    public $timeslotInterval = "01:00";
 
     /**
      * Maps given Events to Calendar Timeslot
@@ -27,23 +29,34 @@ class Calendar implements CalendarInterface
      */
     private function mapEventToTimeSlot(string $slot, string $date): ?array {
         
-        $result = [];
+        $timeslots = [];
 
+        // Timeslots
         $start = DateTimeImmutable::createFromFormat("Y-m-d H:i:s", "$date $slot");
         $end = $start->modify("+ $this->timeslotInterval");
 
-        // Get Plattforms
+        // SocialMedia Posts
         $socialMediaPosts = SocialMediaPostORM::getPostsByTimeslot(
             $start->format("Y-m-d H:i:s"),
             $end->format("Y-m-d H:i:s")
         );
 
         if($socialMediaPosts) {
+
             foreach ($socialMediaPosts as $socialMediaPost) {
-                
+
+                $plattform = PlattformORM::getPlattformByPostId($socialMediaPost->getId());
+                $target = ThreadORM::getThreadById($socialMediaPost->getThreadId());
+
+                $data = array(
+                    // Populate data ...
+                );
+
+                // Map
+                array_push($timeslots, $data);
             }
         }
 
-        return $result;
+        return $timeslots;
     }
 }
