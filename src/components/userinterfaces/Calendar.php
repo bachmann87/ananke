@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace VendorName\Components\UserInterfaces;
 
 use VendorName\Components\Interfaces\CalendarInterface;
@@ -27,8 +28,9 @@ class Calendar implements CalendarInterface
      * 
      * @return array|null
      */
-    private function mapEventToTimeSlot(string $slot, string $date): ?array {
-        
+    private function mapEventToTimeSlot(string $slot, string $date): ?array
+    {
+
         $timeslots = [];
 
         // Timeslots
@@ -41,7 +43,7 @@ class Calendar implements CalendarInterface
             $end->format("Y-m-d H:i:s")
         );
 
-        if($socialMediaPosts) {
+        if ($socialMediaPosts) {
 
             foreach ($socialMediaPosts as $socialMediaPost) {
 
