@@ -1,11 +1,15 @@
 <?php 
+namespace VendorName\Components\UserInterfaces;
+
+use VendorName\Components\Interfaces\CalendarInterface;
+use VendorName\Components\ORM\SocialMediaPostORM;
 
 use DateTimeImmutable;
 
 /**
  * Calendar UI 
  * 
- * @version 1.0.0
+ * @version 2.7.0-rc
  * @author Allan Bachmann <info@ajaybachmann.ch>
  */
 class Calendar implements CalendarInterface
@@ -26,7 +30,19 @@ class Calendar implements CalendarInterface
         $result = [];
 
         $start = DateTimeImmutable::createFromFormat("Y-m-d H:i:s", "$date $slot");
-        $end = $start->modify();
+        $end = $start->modify("+ $this->timeslotInterval");
+
+        // Get Plattforms
+        $socialMediaPosts = SocialMediaPostORM::getPostsByTimeslot(
+            $start->format("Y-m-d H:i:s"),
+            $end->format("Y-m-d H:i:s")
+        );
+
+        if($socialMediaPosts) {
+            foreach ($socialMediaPosts as $socialMediaPost) {
+                
+            }
+        }
 
         return $result;
     }
