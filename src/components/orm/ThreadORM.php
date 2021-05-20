@@ -16,6 +16,8 @@ class ThreadORM extends ObjectORM {
      */
     public static function getThreadById (int $threadId): Thread {
 
+        // Code ...
+
         return $thread;
     }
 }
