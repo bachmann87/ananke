@@ -7,4 +7,8 @@ services:
         volumes: 
             - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
             - ./src:/app
+    php:
+        image: php:fpm
+        volumes:
+            - ./src:/app
         

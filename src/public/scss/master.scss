@@ -1,13 +1,40 @@
+$primary-font: 'Roboto', Arial, sans-serif;
+$primary-bg: #424242;
+$text-color: #fff;
+
 html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: $primary-bg;
+    color: $text-color;
+    position: relative;
 }
 
 div.flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
+    margin: 0 auto;
+    > div.flex-item {
+        padding: 1em;
+        > div {
+            font-family: $primary-font;
+        }
+        &:last-of-type {
+            > img {
+                width: 300px;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
 }
