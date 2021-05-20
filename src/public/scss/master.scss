@@ -1,5 +1,5 @@
 $primary-font: 'Roboto', Arial, sans-serif;
-$primary-bg: #424242;
+$primary-bg: #212121;
 $text-color: #fff;
 
 html, body {
@@ -20,6 +20,9 @@ div.flex {
     margin: 0 auto;
     > div.flex-item {
         padding: 1em;
+        > .title {
+            font-family: 'Newsreader', serif;
+        }
         > div {
             font-family: $primary-font;
         }
@@ -37,4 +40,6 @@ footer {
     position: absolute;
     bottom: .5rem;
     right: .5rem;
+    font-size: 10px;
+    font-family: $primary-font;
 }
