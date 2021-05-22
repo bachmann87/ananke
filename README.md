@@ -1,5 +1,13 @@
 # Ananke
 
+> Note: Default branch renamed to master. Use this commands to update your local clone
+```bash
+git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a
+```
+
 Just another lightweight dockerized PHP Development Framework
 
 ```bash
