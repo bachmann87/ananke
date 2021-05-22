@@ -1,9 +1,9 @@
-# Allink Code Review TD
+# Ananke
 
-First of all you need to adjust your hosts file.
+Just another lightweight dockerized PHP Development Framework
 
 ```bash
-127.0.0.1   allink.local
+127.0.0.1   ananke.local
 ```
 
 To view the page simply run from the root directory:
