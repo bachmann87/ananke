@@ -3,7 +3,6 @@ Just another lightweight dockerized PHP Development Framework
 
 Getting started
 ---
-I try to implement some nice stuff for your dev environment. Further ideas are welcome and appreciated. Open an issue or contact me at info@ajaybachmann.ch. Let's go!
 
 Edit your hosts file:
 
@@ -16,3 +15,12 @@ Run the app:
 ```bash
 docker-compose up
 ```
+Roadmap
+---
+I try to implement some nice stuff for your dev environment. Further ideas are welcome and appreciated. Open an issue or contact me at info@ajaybachmann.ch. Things to come:
+
+- Headless 
+- SSL Certificate Support
+- Unit Tests
+- RESTful Architecture
+- Based on Standards
