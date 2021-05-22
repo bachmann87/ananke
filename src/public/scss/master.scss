@@ -1,3 +1,5 @@
+@import 'modules/animations';
+
 $primary-font: 'Roboto', Arial, sans-serif;
 $primary-bg: #212121;
 $text-color: #fff;
@@ -20,11 +22,32 @@ div.flex {
     margin: 0 auto;
     > div.flex-item {
         padding: 1em;
+        flex: 0 0 25vw;
         > .title {
             font-family: 'Newsreader', serif;
+            > div {
+                overflow: hidden;
+                position: relative;
+                height: 65px;
+                padding-top: 10px;
+                margin-top: -10px;
+                > ul.flip-4 {
+                    animation: flip-4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; 
+                    padding-left: 0px;
+                    > li {
+                        font-family: Serif;
+                        color: #eee;
+                        font-weight: 700;
+                        height: 45px;
+                        margin-bottom: 45px;
+                        display: block;
+                    }
+                }
+            }
         }
         > div {
             font-family: $primary-font;
+            margin-top: -25px;
         }
         &:last-of-type {
             > img {

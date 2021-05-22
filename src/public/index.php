@@ -13,7 +13,16 @@
     <main>
         <div class="flex">
             <div class="flex-item">
-                <h1 class=title>I create web that please people</h1>
+                <h1 class=title>
+                    <div>
+                        <ul class="flip-4">
+                            <li>people</li>
+                            <li>that please</li>
+                            <li>web ❤️</li>
+                            <li>I create...</li>
+                        </ul>
+                    </div>
+                </h1>
                 <div>There are two parts to learning craftsmanship: knowledge and work. You must gain the knowledge of principles, patterns, practices, and heuristics that a craftsman knows, and you must also grind that knowledge into your fingers, eyes, and gut by working hard and
     practicing.</div>
             </div>
@@ -21,7 +30,7 @@
                 <img src="img/me.jpg" alt="Allan J. Bachmann, Web Dev">
             </div>
         </div>        
-    <main>
+    </main>
     <footer>
         &copy; A.J.Bachmann 2021
     </footer>
