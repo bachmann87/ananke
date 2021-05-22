@@ -1,20 +1,17 @@
 # Ananke
-
-> Note: Default branch renamed to master. Use this commands to update your local clone
-```bash
-git branch -m main master
-git fetch origin
-git branch -u origin/master master
-git remote set-head origin -a
-```
-
 Just another lightweight dockerized PHP Development Framework
+
+Getting started
+---
+I try to implement some nice stuff for your dev environment. Further ideas are welcome and appreciated. Open an issue or contact me at info@ajaybachmann.ch. Let's go!
+
+Edit your hosts file:
 
 ```bash
 127.0.0.1   ananke.local
 ```
 
-To view the page simply run from the root directory:
+Run the app:
 
 ```bash
 docker-compose up
