@@ -7,29 +7,11 @@
     <title>Allink - Clean Code Principles</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/master.min.css">
+    <link rel="stylesheet" href="css/ananke.min.css">
 </head>
 <body>
     <main>
-        <div class="flex">
-            <div class="flex-item">
-                <h1 class=title>
-                    <div>
-                        <ul class="flip-4">
-                            <li>people</li>
-                            <li>that please</li>
-                            <li>web ❤️</li>
-                            <li>I create...</li>
-                        </ul>
-                    </div>
-                </h1>
-                <div>There are two parts to learning craftsmanship: knowledge and work. You must gain the knowledge of principles, patterns, practices, and heuristics that a craftsman knows, and you must also grind that knowledge into your fingers, eyes, and gut by working hard and
-    practicing.</div>
-            </div>
-            <div class="flex-item">
-                <img src="img/me.jpg" alt="Allan J. Bachmann, Web Dev">
-            </div>
-        </div>        
+        <div class="flex">Welcome to Ananke!</div>        
     </main>
     <footer>
         &copy; A.J.Bachmann 2021
