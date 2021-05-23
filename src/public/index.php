@@ -13,8 +13,5 @@
     <main>
         <div class="flex">Welcome to Ananke!</div>        
     </main>
-    <footer>
-        &copy; A.J.Bachmann 2021
-    </footer>
 </body>
 </html>
