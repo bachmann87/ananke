@@ -6,7 +6,7 @@ services:
             - "80:80"
         env_file: ./src/.env
         volumes: 
-            - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+            - ./docker/nginx/ananke.conf:/etc/nginx/conf.d/ananke.conf
             - ./src:/app
     php:
         image: php:fpm
