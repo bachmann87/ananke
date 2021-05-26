@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananke</title>
+    
 </head>
 <body>
-    <div>Welcome to Ananke</div>
 
-    <script src="/public/js/snackbar.js"></script>
+    <main>
+        <div>Welcome to Ananke</div>
+    </main>
+
+    <script type="module" src="/public/js/app.js"></script>
 </body>
 </html>
