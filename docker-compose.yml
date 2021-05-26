@@ -9,7 +9,9 @@ services:
             - ./docker/nginx/ananke.conf:/etc/nginx/conf.d/ananke.conf
             - ./src:/app
     php:
-        image: php:fpm
+        build: 
+            context: .
+            dockerfile: PHP.dockerfile
         volumes:
             - ./src:/app
     
