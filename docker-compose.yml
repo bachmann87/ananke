@@ -4,13 +4,14 @@ services:
         image: nginx:latest
         ports:
             - "80:80"
-        env_file: ./src/.env
         volumes: 
             - ./docker/nginx/ananke.conf:/etc/nginx/conf.d/ananke.conf
             - ./src:/app
     php:
         build: 
             context: .
+            args: 
+                - APP_ENV=dev
             dockerfile: PHP.dockerfile
         volumes:
             - ./src:/app
@@ -29,7 +30,7 @@ services:
         image: adminer
         restart: always
         ports:
-            - 8080:8080
+            - "8080:8080"
 volumes:
     mysqldata: {}
     

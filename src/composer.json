@@ -1,0 +1,17 @@
+{
+    "name": "ajaybachmann/ananke",
+    "description": "A lightweight PHP Development Environment",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Allan Bachmann",
+            "email": "info@ajaybachmann.ch"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ananke\\Components\\Core\\": "./components/core"
+        }
+    }
+}
