@@ -1,6 +1,9 @@
 <?
+// Composer Autoload
 require '../vendor/autoload.php';
 
-$app = new Ananke\Components\Core\App($_SERVER['REQUEST_URI']);
+// Init App
+$app = new Ananke\Components\Core\App('dev');
 
-var_dump($app);
+// Run
+$app->run();

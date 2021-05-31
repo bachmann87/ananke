@@ -6,17 +6,53 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5cf3b4ecaf737dde4c83c4484c091fd4
 {
+    public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
         'A' => 
         array (
+            'Ananke\\Components\\Http\\' => 23,
             'Ananke\\Components\\Core\\' => 23,
+            'Ananke\\Components\\Controllers\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Ananke\\Components\\Http\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/components/http',
+        ),
         'Ananke\\Components\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/components/core',
+        ),
+        'Ananke\\Components\\Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/components/controllers',
         ),
     );
 

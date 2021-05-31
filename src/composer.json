@@ -8,10 +8,14 @@
             "email": "info@ajaybachmann.ch"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^3.0"
+    },
     "autoload": {
         "psr-4": {
-            "Ananke\\Components\\Core\\": "./components/core"
+            "Ananke\\Components\\Core\\": "./components/core",
+            "Ananke\\Components\\Http\\": "./components/http",
+            "Ananke\\Components\\Controllers\\": "./components/controllers"
         }
     }
 }

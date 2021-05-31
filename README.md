@@ -9,6 +9,10 @@ Edit your hosts file:
 ```bash
 127.0.0.1   ananke.local
 ```
+Install composer dependencies:
+```bash
+composer install
+```
 
 Run the app:
 

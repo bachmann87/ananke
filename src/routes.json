@@ -1,0 +1,12 @@
+{
+    "game": {
+        "controller": "GameController",
+        "view": "ranking.php",
+        "method": "getRanking"
+    },
+    "start": {
+        "controller": "Ananke\\Components\\Controllers\\GameController",
+        "view": "form.php",
+        "method": "createGame"    
+    }
+}
