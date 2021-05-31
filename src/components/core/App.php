@@ -44,7 +44,7 @@ class App {
 
             // Render
             $view = new View();
-            echo $view->render($template, $response);
+            $view->render($template, $response);
         }
 
     }

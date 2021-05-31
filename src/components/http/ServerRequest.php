@@ -24,7 +24,7 @@ class ServerRequest {
     /**
      * Parse Request from Server Variable
      */
-    private function parseRequest(string $request) {
+    private function parseRequest(string $request): string {
         $request = parse_url($request)['path'];
         return substr($request, 1, strlen($request));
     }
@@ -32,17 +32,18 @@ class ServerRequest {
     /**
      * Get cleaned Request URI
      */
-    public function getRequestUri() {
+    public function getRequestUri(): string {
         return $this->requestUri;
     }
 
     /**
      * Set the value of requestUri
      */
-    public function setRequestUri($requestUri): self
+    public function setRequestUri($requestUri): void
     {
         $this->requestUri = $requestUri;
-        return $this;
     }
+
+    
 }
 

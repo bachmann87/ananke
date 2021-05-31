@@ -22,8 +22,12 @@ class View {
      */
     public function render($templatePath, $data) {
 
+        ob_start();
+
         // Data Array accessible in Template as $data
         require $templatePath;
+
+        echo ob_get_clean();
 
     }
 }
