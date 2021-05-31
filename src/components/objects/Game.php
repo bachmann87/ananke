@@ -57,9 +57,6 @@ class Game {
             
             // Iterate Players
             foreach($this->players as $player) {
-                
-                // Flag if Player layed card
-                $cardLayed = false;
 
                 // Get Deck
                 $deck = $player->getDeck();
