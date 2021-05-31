@@ -1,6 +1,6 @@
 {
     "game": {
-        "controller": "GameController",
+        "controller": "Ananke\\Components\\Controllers\\GameController",
         "view": "ranking.php",
         "method": "getRanking"
     },
@@ -8,5 +8,15 @@
         "controller": "Ananke\\Components\\Controllers\\GameController",
         "view": "form.php",
         "method": "createGame"    
-    }
+    },
+    "init": {
+        "controller": "Ananke\\Components\\Controllers\\GameController",
+        "view": "json.php",
+        "method": "createGame"    
+    },
+    "home": {
+        "controller": "Ananke\\Components\\Controllers\\HomeController",
+        "view": "form.php",
+        "method": "index"    
+    }      
 }

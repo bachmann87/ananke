@@ -7,7 +7,7 @@ namespace Ananke\Components\Http;
  */
 class Response {
 
-    protected $body;
+    public $body = [];
 
     public function __construct()
     {
@@ -25,10 +25,15 @@ class Response {
     /**
      * Set the value of body
      */
-    public function setBody($body): self
+    public function setBody($body): void
     {
         $this->body = $body;
+    }
 
-        return $this;
+    /**
+     * Sets Content Type of Response. Must be valid MIME Type;
+     */
+    public function setContentType($contentType): void {
+        header($contentType);
     }
 }

@@ -15,7 +15,9 @@
         "psr-4": {
             "Ananke\\Components\\Core\\": "./components/core",
             "Ananke\\Components\\Http\\": "./components/http",
-            "Ananke\\Components\\Controllers\\": "./components/controllers"
+            "Ananke\\Components\\Controllers\\": "./components/controllers",
+            "Ananke\\Components\\Models\\": "./components/models",
+            "Ananke\\Components\\Objects\\": "./components/objects"
         }
     }
 }

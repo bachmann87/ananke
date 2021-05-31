@@ -23,6 +23,8 @@ class ComposerStaticInit5cf3b4ecaf737dde4c83c4484c091fd4
         ),
         'A' => 
         array (
+            'Ananke\\Components\\Objects\\' => 26,
+            'Ananke\\Components\\Models\\' => 25,
             'Ananke\\Components\\Http\\' => 23,
             'Ananke\\Components\\Core\\' => 23,
             'Ananke\\Components\\Controllers\\' => 30,
@@ -41,6 +43,14 @@ class ComposerStaticInit5cf3b4ecaf737dde4c83c4484c091fd4
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Ananke\\Components\\Objects\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/components/objects',
+        ),
+        'Ananke\\Components\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/components/models',
         ),
         'Ananke\\Components\\Http\\' => 
         array (

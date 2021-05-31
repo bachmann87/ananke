@@ -11,16 +11,19 @@ use Ananke\Components\Http\Response;
 class View {
     
     protected string $templatePath;
-    protected Response $response;
 
-
-    public function __construct($templatePath, $response)
+    public function __construct()
     {
-        $this->templatePath = $templatePath;
-        $this->response = $response;
+        // No Constructor Injection
     }
 
-    public function render() {
-        include $this->templatePath;
+    /**
+     * Renders View
+     */
+    public function render($templatePath, $data) {
+
+        // Data Array accessible in Template as $data
+        require $templatePath;
+
     }
 }

@@ -30,6 +30,11 @@ class Router {
      */
     public function resolvesRequest() {
 
+        // Map Default Controller
+        if($this->request->getRequestUri() == "") {
+            $this->request->setRequestUri('home');
+        }
+
         // Check if URL is valid
         if(array_key_exists($this->request->getRequestUri(), $this->routes)) {
             return true;

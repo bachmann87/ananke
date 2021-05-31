@@ -29,9 +29,21 @@ class GameController extends BaseController {
      * @return Response
      */
     public function createGame(ServerRequest $request): Response {
-        $model = $this->loadModel('Ananke\\Components\\Model\\GameModel');
-        var_dump($model);
+
+        $gameModel = $this->loadModel('Ananke\\Components\\Models\\GameModel');
         $response = new Response();
+        
+        if(isset($_POST['players']) && isset($_POST['cards'])) {
+            
+            // Play Game
+            $data = $gameModel->initGame($_POST['players'], $_POST['cards']);
+
+            // Set Response
+            $response->setBody($data);
+            $response->setContentType("Content-Type: application/json;charset=UTF-8");
+
+        }
+        
         return $response;
     }
 

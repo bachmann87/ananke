@@ -33,17 +33,19 @@ class App {
         
         if($this->router->resolvesRequest()) {
             
+            // Components
             $controller = $this->router->resolveComponent('controller');
             $method = $this->router->resolveComponent('method');
-            $view = $this->router->resolveComponent('view');
+            $template = $this->router->resolveComponent('view');
 
+            // Calls
             $controller = new $controller($method);
             $response = $controller->{$method}($this->request);
 
+            // Render
+            $view = new View();
+            echo $view->render($template, $response);
         }
-            
-        $view = new View($view, $response);
-        echo $view->render();
 
     }
 }
