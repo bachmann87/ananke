@@ -46,7 +46,8 @@ class Router {
             case 'method':
                 return $this->routes[$this->request->getRequestUri()]['method'];
             case 'view':
-                return $this->routes[$this->request->getRequestUri()]['view'];                                  
+                $view = $this->routes[$this->request->getRequestUri()]['view'];                                   
+                return $_SERVER['DOCUMENT_ROOT']."/components/views/".$view;
             default:
                 // No Default
                 break;

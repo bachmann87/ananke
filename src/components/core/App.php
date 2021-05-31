@@ -4,7 +4,7 @@ namespace Ananke\Components\Core;
 
 use Ananke\Components\Http\Router;
 use Ananke\Components\Http\ServerRequest;
-use Twig\Loader\FilesystemLoader;
+use Ananke\Components\Core\View;
 
 /**
  * App
@@ -18,7 +18,6 @@ class App {
     protected $request;
     protected $router;
     protected $env;
-    protected $namespace = "Ananke\\Components\\Controllers\\";
 
     public function __construct($env)
     {
@@ -39,13 +38,12 @@ class App {
             $view = $this->router->resolveComponent('view');
 
             $controller = new $controller($method);
-            $response = $controller->{$method}();
+            $response = $controller->{$method}($this->request);
 
-            var_dump($response);
         }
             
-        // $view = new View($template, $response);
-        // echo $view->render();
+        $view = new View($view, $response);
+        echo $view->render();
 
     }
 }

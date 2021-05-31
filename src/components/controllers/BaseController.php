@@ -11,4 +11,13 @@ class BaseController {
         }
     }
 
+    /**
+     * Load a model at runtime
+     */
+    public function loadModel(string $model) {
+        if(file_exists($model)) {
+            return new $model;
+        }   
+    }
+
 }
