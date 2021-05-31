@@ -8,7 +8,7 @@ namespace Ananke\Components\Http;
 class Router {
 
     protected $routes = [];
-    protected $routerPath = "./routes.json";
+    protected $routerPath = "/router/routes.json";
     protected ServerRequest $request;
 
     public function __construct(ServerRequest $request)

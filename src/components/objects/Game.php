@@ -48,15 +48,18 @@ class Game {
         // Init Result
         $result = array("players"=>$this->players);
         $dice = new Dice();
-
+        
         // Play
         while ($this->gameRunning) {
             
             // Roll the dice
             $currentColor = $dice->roll();
-
+            
             // Iterate Players
             foreach($this->players as $player) {
+                
+                // Flag if Player layed card
+                $cardLayed = false;
 
                 // Get Deck
                 $deck = $player->getDeck();
@@ -65,11 +68,29 @@ class Game {
                 $cards = $deck->getCards();
 
                 // Iterate Cards
-                foreach ($cards as $card) {
+                for ($i=0; $i < count($cards); $i++) { 
+
+                    // Get Current Card
+                    $card = $cards[$i];
+
+                    // Check if color match
                     if($currentColor == $card->getColor()) {
+
+                        // Check if Player already has card layed
+                        if(!$player->getCardLayed()) {
+
+                            // Remove Card from Deck
+                            array_splice($cards, $i, 1);
+                            $result = $cards;
+
+                            // Set
+                            $player->setCardLayed(true);
+                        }
+
+                        // Stop Game
                         $this->gameRunning = false;
                     }
-                }
+                } 
             }
 
         }

@@ -7,6 +7,10 @@ namespace Ananke\Components\Http;
  */
 class Response {
 
+    public $header = [
+        "redirect" => null,
+    ];
+    
     public $body = [];
 
     public function __construct()
@@ -35,5 +39,15 @@ class Response {
      */
     public function setContentType($contentType): void {
         header($contentType);
+    }
+
+
+    /**
+     * Set the value of header
+     */
+    public function setHeader($key, $value): self
+    {
+        $this->header[$key] = $value;
+        return $this;
     }
 }
