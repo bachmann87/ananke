@@ -9,6 +9,12 @@ Edit your hosts file:
 ```bash
 127.0.0.1   ananke.local
 ```
+Init Autoload:
+```bash
+composer dump-autoload
+```
+
+```
 Run the app:
 
 ```bash
