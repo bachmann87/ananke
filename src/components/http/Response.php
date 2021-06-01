@@ -4,24 +4,30 @@ namespace Ananke\Components\Http;
 
 /**
  * Representation of HTML Response
+ * 
+ * @author Allan Bachmann <info@ajaybachmann.ch>
+ * @version 1.0.0
  */
 class Response {
 
-    public $header = [
+    public array $header = [
         "redirect" => null,
     ];
     
-    public $body = [];
+    public array $body = [];
 
-    public function __construct()
+    /**
+     * Constructor
+     */
+    public function __construct(array $body = [])
     {
-        // No Constructor Injection
+        $this->body = $body;
     }
 
     /**
      * Get the value of body
      */
-    public function getBody()
+    public function getBody(): array
     {
         return $this->body;
     }
@@ -45,9 +51,8 @@ class Response {
     /**
      * Set the value of header
      */
-    public function setHeader($key, $value): self
+    public function setHeader($key, $value): void
     {
         $this->header[$key] = $value;
-        return $this;
     }
 }
