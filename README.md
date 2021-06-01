@@ -32,6 +32,7 @@ I try to implement some nice stuff for your dev environment. Further ideas are w
 
 - Headless 
 - SSL Certificate Support
+- ReactJS Frontend
 - Unit Tests
 - RESTful Architecture
 - Based on Standards
