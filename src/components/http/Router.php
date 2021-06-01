@@ -7,8 +7,8 @@ namespace Ananke\Components\Http;
  */
 class Router {
 
-    protected $routes = [];
-    protected $routerPath = "/router/routes.json";
+    protected array $routes = [];
+    protected string $routerPath = "/router/routes.json";
     protected ServerRequest $request;
 
     public function __construct(ServerRequest $request)
@@ -20,7 +20,7 @@ class Router {
     /**
      * Load Routes
      */
-    private function loadRoutes() {
+    private function loadRoutes(): array {
         return json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$this->routerPath), true);
     }
 
@@ -28,7 +28,7 @@ class Router {
      * Resolves Request based on Routes Config
      * @see ./routes.json
      */
-    public function resolvesRequest() {
+    public function resolvesRequest(): bool {
 
         // Map Default Controller
         if($this->request->getRequestUri() == "") {
@@ -44,7 +44,7 @@ class Router {
     /**
      * Resolves Requested Component
      */
-    public function resolveComponent(string $component) {
+    public function resolveComponent(string $component): string {
         switch ($component) {
             case 'controller':
                 return $this->routes[$this->request->getRequestUri()]['controller'];
@@ -62,7 +62,7 @@ class Router {
     /**
      * Get the value of routes
      */
-    public function getRoutes()
+    public function getRoutes(): array
     {
         return $this->routes;
     }
@@ -70,10 +70,8 @@ class Router {
     /**
      * Set the value of routes
      */
-    public function setRoutes($routes): self
+    public function setRoutes(array $routes): void
     {
         $this->routes = $routes;
-
-        return $this;
     }
 }
