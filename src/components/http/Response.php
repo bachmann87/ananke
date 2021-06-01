@@ -35,7 +35,7 @@ class Response {
     /**
      * Set the value of body
      */
-    public function setBody($body): void
+    public function setBody(array $body): void
     {
         $this->body = $body;
     }
@@ -43,7 +43,7 @@ class Response {
     /**
      * Sets Content Type of Response. Must be valid MIME Type;
      */
-    public function setContentType($contentType): void {
+    public function setContentType(string $contentType): void {
         header($contentType);
     }
 
@@ -51,7 +51,7 @@ class Response {
     /**
      * Set the value of header
      */
-    public function setHeader($key, $value): void
+    public function setHeader(string $key, string $value): void
     {
         $this->header[$key] = $value;
     }
