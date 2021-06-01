@@ -18,8 +18,8 @@ class ServerRequest {
     public function __construct()
     {
         $this->requestUri = $this->parseRequest($_SERVER['REQUEST_URI']);
-        $this->method = $_SERVER['REQUEST_METHOD'];
         $this->query = $this->parseQueryString($_SERVER['REQUEST_URI']);
+        $this->method = $_SERVER['REQUEST_METHOD'];
     }
 
     /**
