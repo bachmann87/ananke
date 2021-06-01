@@ -38,7 +38,9 @@ class Router {
         // Check if URL is valid
         if(array_key_exists($this->request->getRequestUri(), $this->routes)) {
             return true;
-        } 
+        } else {
+            return false;
+        }
     }
 
     /**
