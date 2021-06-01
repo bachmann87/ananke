@@ -19,6 +19,14 @@ class ServerRequest {
     {
         $this->requestUri = $this->parseRequest($_SERVER['REQUEST_URI']);
         $this->method = $_SERVER['REQUEST_METHOD'];
+        $this->query = $this->parseQueryString($_SERVER['REQUEST_URI']);
+    }
+
+    /**
+     * Parse Query String from Server Variable
+     */
+    private function parseQueryString(string $requestUri): string {
+        return parse_url($requestUri)['query'];
     }
 
     /**
