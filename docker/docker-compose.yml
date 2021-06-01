@@ -5,8 +5,8 @@ services:
         ports:
             - "80:80"
         volumes: 
-            - ./docker/nginx/ananke.conf:/etc/nginx/conf.d/ananke.conf
-            - ./src:/app
+            - ./nginx/ananke.conf:/etc/nginx/conf.d/ananke.conf
+            - ../src:/app
     php:
         build: 
             context: .
@@ -14,7 +14,7 @@ services:
                 - APP_ENV=dev
             dockerfile: PHP.dockerfile
         volumes:
-            - ./src:/app
+            - ../src:/app
     mysql:
         image: mariadb:latest
         environment:
@@ -30,7 +30,7 @@ services:
         image: adminer
         restart: always
         ports:
-            - "8080:8080"
+            - 8080
 volumes:
     mysqldata: {}
     

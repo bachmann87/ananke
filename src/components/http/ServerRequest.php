@@ -13,7 +13,7 @@ class ServerRequest {
 
     protected string $requestUri;
     protected string $method;
-    protected string $query;
+    protected string|null $query;
 
     public function __construct()
     {
@@ -25,8 +25,16 @@ class ServerRequest {
     /**
      * Parse Query String from Server Variable
      */
-    private function parseQueryString(string $requestUri): string {
-        return parse_url($requestUri)['query'];
+    private function parseQueryString(string $requestUri): string|null {
+        
+        // Init
+        $query = null;
+        
+        if(isset(parse_url($requestUri)['query'])) {
+            $query = parse_url($requestUri)['query'];
+        }
+
+        return $query;
     }
 
     /**
