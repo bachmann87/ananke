@@ -1,19 +1,4 @@
 {
-    "game": {
-        "controller": "Ananke\\Components\\Controllers\\GameController",
-        "view": "ranking.php",
-        "method": "getRanking"
-    },
-    "start": {
-        "controller": "Ananke\\Components\\Controllers\\GameController",
-        "view": "form.php",
-        "method": "createGame"    
-    },
-    "init": {
-        "controller": "Ananke\\Components\\Controllers\\GameController",
-        "view": "json.php",
-        "method": "createGame"    
-    },
     "home": {
         "controller": "Ananke\\Components\\Controllers\\HomeController",
         "view": "form.php",

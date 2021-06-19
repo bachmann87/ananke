@@ -24,6 +24,8 @@ class ServerRequest {
 
     /**
      * Parse Query String from Server Variable
+     * 
+     * @param string|null $requestUri
      */
     private function parseQueryString(string $requestUri): string|null {
         

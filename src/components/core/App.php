@@ -15,8 +15,8 @@ use Ananke\Components\Core\View;
  */
 class App {
 
-    protected $request;
-    protected $router;
+    protected ServerRequest $request;
+    protected Router $router;
     protected $env;
 
     public function __construct($env)
