@@ -1,0 +1,19 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bachmann87/ananke.git"
+  },
+  "author": "Allan Bachmann <info@ajaybachmann.ch>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bachmann87/ananke/issues"
+  },
+  "homepage": "https://github.com/bachmann87/ananke#readme"
+}

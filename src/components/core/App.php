@@ -42,9 +42,12 @@ class App {
             $controller = new $controller($method);
             $response = $controller->{$method}($this->request);
 
-            // Render
-            $view = new View();
-            $view->render($template, $response);
+            // // Render
+            // $view = new View();
+            // echo $view->render($template, $response);
+
+            // Return
+            return $response;
         }
 
     }

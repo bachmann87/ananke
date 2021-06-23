@@ -2,6 +2,7 @@
     "home": {
         "controller": "Ananke\\Components\\Controllers\\HomeController",
         "view": "form.php",
-        "method": "index"    
+        "method": "index",
+        "http": "GET"    
     }      
 }

@@ -20,14 +20,15 @@ class View {
     /**
      * Renders View
      */
-    public function render($templatePath, $data) {
+    public function render(string $templatePath, array $data = []) {
 
+        // Outputbuffer
         ob_start();
 
         // Data Array accessible in Template as $data
         require $templatePath;
 
-        echo ob_get_clean();
+        return ob_get_clean();
 
     }
 }

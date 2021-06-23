@@ -15,6 +15,7 @@ class Router {
     {
         $this->routes = $this->loadRoutes();
         $this->request = $request;
+        // Set default controller
     }
 
     /**
